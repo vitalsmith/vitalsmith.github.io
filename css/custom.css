@@ -35,17 +35,41 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #fff;
+    background: url("../img/intro-section.png");
+    background-size: 100%; 
+    background-repeat: no-repeat;
 }
 
-.about-section {
+.what-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: #eee;
+    background: url("../img/what-section.png");
+    background-size: 100%; 
+    background-repeat: no-repeat;
 }
 
-.services-section {
+.how-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.how-section-top {
+    height: 50%;
+}
+
+.how-section-bottom {
+    height: 50%;
+    padding-top: 100px;
+    text-align: center;
+    background: url("../img/how-section.png");
+    background-size: 100%; 
+    background-repeat: no-repeat;
+}
+
+.who-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
