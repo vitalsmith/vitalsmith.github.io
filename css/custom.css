@@ -80,11 +80,11 @@ p, span {
 }
 
 section .container{
-    padding: 70px 0;
+    padding: 50px 0 30px 0;
 }
 
 section .container-fluid{
-    padding: 70px 0;
+    padding: 50px 0 30px 0;
 }
 
 aside {
@@ -260,9 +260,13 @@ header .header-content .header-content-inner .header-title {
     margin-top: 0;
 }
 
+.img-bg-bottom {
+  margin-top: 40px;
+}
+
 .img-icon-box {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .img-icon-box img {
@@ -272,8 +276,14 @@ header .header-content .header-content-inner .header-title {
   margin: 0 1%;
 }
 
+@media(min-width:996px) {
+  .img-icon-box img {
+    width: 7%;
+    height: 7%;
+  }
+}
 .img-sponsors {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .img-bg-box {
@@ -284,7 +294,7 @@ header .header-content .header-content-inner .header-title {
   display: block;
   text-align: center;
   background-color: #f9f9f9;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 @media(min-width:768px) {
@@ -292,28 +302,13 @@ header .header-content .header-content-inner .header-title {
   .img-bg-box .img-bg-caption {
     display: block;
     position: absolute;
-    height: 85%;
-    max-width: 1000px;
+    height: 55%;
     overflow: auto;
     margin: auto;
     left: 0; bottom: 0; right: 0;
     text-align: center;
     background-color: transparent;
-  }
-}
-
-@media(min-width:996px) {
-
-  .img-bg-box .img-bg-caption {
-    display: block;
-    position: absolute;
-    height: 70%;
-    max-width: 1000px;
-    overflow: auto;
-    margin: auto;
-    left: 0; bottom: 0; right: 0;
-    text-align: center;
-    background-color: transparent;
+    padding-top: 0;
   }
 }
 
