@@ -1,84 +1,496 @@
-/*!
- * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600);
 
+html,
 body {
     width: 100%;
     height: 100%;
 }
 
-html {
+body {
+    font-family: sans-serif;
+}
+
+hr {
+    max-width: 50px;
+    border: 1px solid #222;
+}
+
+hr.light {
+    border-color: #fff;
+}
+
+a {
+    color: #222;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
+}
+
+h2 {
+  font-size: 46px;
+  font-weight: 200;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+p, span {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
+    font-weight: 200;
+}
+
+.bg-primary {
+    background-color: #222;
+}
+
+.bg-dark {
+    color: #fff;
+    background-color: #222;
+}
+
+.bg-gray {
+  background-color: #eee;
+}
+
+.bg-img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text-faded {
+    color: rgba(255,255,255,.7);
+}
+
+section .container{
+    padding: 70px 0;
+}
+
+section .container-fluid{
+    padding: 70px 0;
+}
+
+/*@media(min-width:768px) {*/
+  /*section .container{*/
+    /*padding: 100px 0;*/
+  /*}*/
+
+  /*section .container-fluid{*/
+    /*padding: 100px 100px;*/
+  /*}*/
+/*}*/
+
+aside {
+    padding: 50px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.img-icons {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  margin: 60px 20px 0 20px;
+}
+
+.img-sponsors {
+  margin-top: 60px;
+}
+
+.navbar-default {
+    border-color: rgba(34,34,34,.05);
+    font-family: 'Source Sans Pro','Helvetica Neue',Arial,sans-serif;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro','Helvetica Neue',Arial,sans-serif;
+    font-weight: 600;
+    color: #222;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #222;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 300;
+    color: #222;
+}
+
+.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:focus:hover {
+    color: #222;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: #222!important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
+    background-color: transparent;
+}
+
+@media(min-width:768px) {
+    .navbar-default {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: transparent;
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: transparent;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+      color: #888;
+    }
+
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {
+      color: #222;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34,34,34,.05);
+        background-color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #222;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #222;
+    }
+
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: #888;
+    }
+
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {
+        color: #222;
+    }
+}
+
+header {
+    position: relative;
     width: 100%;
-    height: 100%;
+    text-align: center;
+    background-image: url(../img/header.png);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-@media(min-width:767px) {
-    .navbar {
-        padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner .header-title {
+    font-weight: 200;
+    color: #222;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 40px;
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 100%;
     }
 
-    .top-nav-collapse {
-        padding: 0;
+    header .header-content {
+        position: absolute;
+        top: 45%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    header .header-content .header-content-inner .header-title {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
     }
 }
 
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
-of those sections to manage the look and feel of the site. */
-
-.intro-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: url("../img/intro-section.png");
-    background-size: 100%; 
-    background-repeat: no-repeat;
+.section-heading {
+    margin-top: 0;
 }
 
-.what-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
-    background: url("../img/what-section.png");
-    background-size: 100%; 
-    background-repeat: no-repeat;
+.container-img {
+  position: relative;
 }
 
-.how-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
+.container-img .img-caption {
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 50%;
+  max-width: 1000px;
+  overflow: auto;
+  margin: auto;
+  left: 0; bottom: 0; right: 0;
+  text-align: center;
+
 }
 
-.how-section-top {
-    height: 50%;
+.side-margin {
+  margin: 0 auto;
 }
 
-.how-section-bottom {
-    height: 50%;
-    padding-top: 100px;
-    text-align: center;
-    background: url("../img/how-section.png");
-    background-size: 100%; 
-    background-repeat: no-repeat;
+.member-box {
+    margin: 30px auto 0;
+    max-width: 240px;
 }
 
-.who-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
+.member-box div {
+  margin: 20px 0 15px 0;
 }
 
-.contact-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #eee;
+.member-box span {
+  font-weight: 300 !important;
+}
+
+.member-box-role {
+  float: right;
+  color: #888;
+}
+
+.member-box p {
+  font-size: 15px !important;
+  margin-bottom: 0;
+  min-height: 200px;
+}
+
+@media(min-width:768px) {
+    .side-margin {
+      margin: 0 100px 0 100px;
+    }
+
+    .member-box {
+        margin: 20px auto 0;
+    }
+    .member-box p {
+      min-height: 300px;
+    }
+}
+
+.call-to-action h2 {
+    margin: 0 auto 20px;
+}
+
+.text-primary {
+    color: #222;
+}
+
+.no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-default {
+    border-color: #fff;
+    color: #222;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    border-color: #ededed;
+    color: #222;
+    background-color: #f2f2f2;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background-image: none;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn-default .badge {
+    color: #fff;
+    background-color: #222;
+}
+
+.btn-primary {
+    border-color: #f05f40;
+    color: #222;
+    background-color: #f05f40;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #ed431f;
+    color: #222;
+    background-color: #ee4b28;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: #222;
+    background-color: #222;
+}
+
+.btn-primary .badge {
+    color: #222;
+    background-color: #fff;
+}
+
+.btn {
+    border: 0;
+    border-radius: 300px;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro','Helvetica Neue',Arial,sans-serif;
+    font-weight: 700;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0;
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0;
 }
