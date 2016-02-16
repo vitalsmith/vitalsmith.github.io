@@ -53,7 +53,14 @@ p, span {
     font-weight: 200;
 }
 
-button {
+label {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+}
+
+button, input {
   font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
 }
 
@@ -385,10 +392,9 @@ header .header-content .header-content-inner .header-title {
     padding: 15px 30px;
 }
 
-.modal-dialog {
-    width: 405px
+.btn-sm {
+    padding: 8px 20px;
 }
-
 ::-moz-selection {
     text-shadow: none;
     color: #fff;

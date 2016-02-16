@@ -71,4 +71,16 @@ module.exports = function(grunt) {
     'htmlmin:dist'
   ]);
 
+  grunt.registerTask('build', [
+    'clean:dist',
+    'useminPrepare',
+    'concat',
+    'cssmin',
+    'uglify',
+    'copy:dist',
+    'usemin',
+    'imagemin:dist',
+    'htmlmin:dist'
+  ]);
+
 };
