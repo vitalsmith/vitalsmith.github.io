@@ -53,19 +53,16 @@ p, span {
     font-weight: 200;
 }
 
-label {
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
-  font-weight: 300;
-}
-
-button, input {
+button {
   font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
 }
 
 iframe html {
     font-family: 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
+}
+
+.modal-dialog {
+    width: 390px;
 }
 
 .bg-primary {
@@ -392,9 +389,6 @@ header .header-content .header-content-inner .header-title {
     padding: 15px 30px;
 }
 
-.btn-sm {
-    padding: 8px 20px;
-}
 ::-moz-selection {
     text-shadow: none;
     color: #fff;
